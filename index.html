@@ -39,7 +39,7 @@
   <section id="about" class="section">
     <div class="container">
       <h2 class="section-title">关于我</h2>
-      <div class="about-content clickable" data-modal-title="关于我" data-modal-detail="我是一名嵌入式工程师，专注于嵌入式系统开发与底层驱动设计。<br><br>在日常工作中，我热衷于解决硬件与软件之间的复杂问题，追求代码的高效与稳定。<br><br>我的技术之旅从单片机开始，逐步深入到 Linux 嵌入式系统、RTOS 以及各种通信协议。我相信扎实的底层功底是构建可靠系统的基石。<br><br>除了技术本身，我也注重团队协作与知识分享，喜欢在项目中推动最佳实践，帮助团队共同成长。">
+      <div class="about-content clickable" onclick="location.href='about.html'">
         <p>我是一名嵌入式工程师，专注于嵌入式系统开发与底层驱动设计。</p>
         <p>在日常工作中，我热衷于解决硬件与软件之间的复杂问题，追求代码的高效与稳定。我的技术之旅从单片机开始，逐步深入到 Linux 嵌入式系统、RTOS 以及各种通信协议。</p>
       </div>
@@ -51,18 +51,18 @@
     <div class="container">
       <h2 class="section-title">技能</h2>
       <div class="skills-cloud">
-        <span class="skill-tag" data-modal-title="C语言" data-modal-detail="熟练掌握 C 语言，熟悉底层编程与嵌入式开发，有丰富的 MCU 裸机编程经验。">C语言</span>
-        <span class="skill-tag" data-modal-title="C++" data-modal-detail="熟练使用 C++ 进行嵌入式应用及驱动开发，熟悉面向对象设计模式在嵌入式场景中的应用。">C++</span>
-        <span class="skill-tag" data-modal-title="ARM Cortex-M" data-modal-detail="熟悉 ARM Cortex-M 系列 MCU 开发与调试，熟练使用 Keil、IAR 等开发环境。">ARM Cortex-M</span>
-        <span class="skill-tag" data-modal-title="RTOS" data-modal-detail="掌握 FreeRTOS、RT-Thread 等实时操作系统，有实际项目中的任务调度与资源管理经验。">RTOS</span>
-        <span class="skill-tag" data-modal-title="通信协议" data-modal-detail="熟悉 I2C、SPI、UART、CAN 等常用通信协议，能独立完成协议调试与驱动开发。">通信协议</span>
-        <span class="skill-tag" data-modal-title="硬件调试" data-modal-detail="熟练使用逻辑分析仪、示波器、万用表等调试工具，能快速定位硬件与软件的接口问题。">硬件调试</span>
-        <span class="skill-tag" data-modal-title="Linux驱动" data-modal-detail="熟悉 Linux 内核驱动开发与系统移植，了解设备树、字符设备驱动等核心概念。">Linux驱动</span>
-        <span class="skill-tag" data-modal-title="Git" data-modal-detail="掌握 Git 版本控制与团队协作流程，熟练使用分支管理、代码审查等工作流。">Git</span>
-        <span class="skill-tag" data-modal-title="Python" data-modal-detail="熟悉 Python 脚本开发与自动化测试，常用于数据处理、工具链开发等场景。">Python</span>
-        <span class="skill-tag" data-modal-title="硬件基础" data-modal-detail="了解 PCB 设计流程，能与硬件工程师高效协作，理解原理图与布局的基本要点。">硬件基础</span>
-        <span class="skill-tag" data-modal-title="低功耗设计" data-modal-detail="掌握常见的电源管理、低功耗设计方法，在电池供电设备开发中有实践经验。">低功耗设计</span>
-        <span class="skill-tag" data-modal-title="性能优化" data-modal-detail="熟悉常见的嵌入式调试与性能优化手段，包括内存优化、中断响应优化等。">性能优化</span>
+        <span class="skill-tag" onclick="location.href='skills.html'">C语言</span>
+        <span class="skill-tag" onclick="location.href='skills.html'">C++</span>
+        <span class="skill-tag" onclick="location.href='skills.html'">ARM Cortex-M</span>
+        <span class="skill-tag" onclick="location.href='skills.html'">RTOS</span>
+        <span class="skill-tag" onclick="location.href='skills.html'">通信协议</span>
+        <span class="skill-tag" onclick="location.href='skills.html'">硬件调试</span>
+        <span class="skill-tag" onclick="location.href='skills.html'">Linux驱动</span>
+        <span class="skill-tag" onclick="location.href='skills.html'">Git</span>
+        <span class="skill-tag" onclick="location.href='skills.html'">Python</span>
+        <span class="skill-tag" onclick="location.href='skills.html'">硬件基础</span>
+        <span class="skill-tag" onclick="location.href='skills.html'">低功耗设计</span>
+        <span class="skill-tag" onclick="location.href='skills.html'">性能优化</span>
       </div>
     </div>
   </section>
@@ -72,26 +72,26 @@
     <div class="container">
       <h2 class="section-title">爱好</h2>
       <div class="hobbies-grid">
-        <div class="hobby-card" data-modal-title="骑行" data-modal-detail="周末我喜欢沿着城市绿道骑行，最远完成过单日 120 公里的长途骑行。骑行不仅是运动，更是探索城市和自然的方式。">
+        <a href="hobby-cycling.html" class="hobby-card">
           <div class="hobby-icon">🚴</div>
           <h3>骑行</h3>
           <p>享受迎风而行的自由与城市风景</p>
-        </div>
-        <div class="hobby-card" data-modal-title="游泳" data-modal-detail="游泳是我保持身心平衡的最佳运动。蛙泳和自由泳都比较熟练，每周至少去游泳馆两次，享受在水中完全放空的感觉。">
+        </a>
+        <a href="hobby-swimming.html" class="hobby-card">
           <div class="hobby-icon">🏊</div>
           <h3>游泳</h3>
           <p>在水中感受全身心的放松与力量</p>
-        </div>
-        <div class="hobby-card" data-modal-title="篮球" data-modal-detail="从大学开始打篮球，喜欢打控卫位置。篮球教会了我团队配合的重要性，也让我结识了许多志同道合的朋友。">
+        </a>
+        <a href="hobby-basketball.html" class="hobby-card">
           <div class="hobby-icon">🏀</div>
           <h3>篮球</h3>
           <p>享受团队配合与竞技的激情</p>
-        </div>
-        <div class="hobby-card" data-modal-title="电影" data-modal-detail="喜欢科幻和悬疑类电影，诺兰和维伦纽瓦是我最喜欢的导演。《星际穿越》和《银翼杀手2049》是我的最爱。">
+        </a>
+        <a href="hobby-movie.html" class="hobby-card">
           <div class="hobby-icon">🎬</div>
           <h3>电影</h3>
           <p>在光影世界中体验百态人生</p>
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -124,15 +124,6 @@
       <p>&copy; 2026 区亮钊. All Rights Reserved.</p>
     </div>
   </footer>
-
-  <!-- 弹窗遮罩 -->
-  <div class="modal-overlay" id="modal-overlay">
-    <div class="modal-card">
-      <button class="modal-close" aria-label="关闭">&times;</button>
-      <h3 class="modal-title"></h3>
-      <p class="modal-detail"></p>
-    </div>
-  </div>
 
   <script src="js/main.js"></script>
 </body>

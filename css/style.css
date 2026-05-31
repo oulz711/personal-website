@@ -228,6 +228,7 @@ body {
 }
 
 .hobby-card {
+  display: block;
   background: var(--color-bg);
   border: 1px solid var(--color-border);
   border-radius: 12px;
@@ -235,6 +236,8 @@ body {
   text-align: center;
   transition: all var(--transition);
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 }
 
 .hobby-card:hover {
@@ -259,71 +262,10 @@ body {
   color: var(--color-text-light);
 }
 
-/* === 弹窗 === */
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 200;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(6px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-.modal-overlay.visible {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.modal-card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 40px 36px 32px;
-  max-width: 480px;
-  width: 90%;
-  position: relative;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-  transform: translateY(20px) scale(0.96);
-  transition: transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-
-.modal-overlay.visible .modal-card {
-  transform: translateY(0) scale(1);
-}
-
-.modal-close {
-  position: absolute;
-  top: 14px;
-  right: 18px;
-  background: none;
-  border: none;
-  font-size: 1.6rem;
-  color: var(--color-text-light);
-  cursor: pointer;
-  line-height: 1;
-  padding: 4px 8px;
-  transition: color var(--transition);
-}
-
-.modal-close:hover {
-  color: var(--color-text);
-}
-
-.modal-title {
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-bottom: 18px;
-  color: var(--color-text);
-}
-
-.modal-detail {
-  font-size: 0.95rem;
-  color: var(--color-text-light);
-  line-height: 1.9;
+/* === 子页面内容区 === */
+.page-content {
+  padding: 120px 0 80px;
+  min-height: 60vh;
 }
 
 /* === 联系方式 === */
