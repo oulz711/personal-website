@@ -1,0 +1,343 @@
+/* === 基础重置 === */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f9fa;
+  --color-text: #2d2d2d;
+  --color-text-light: #6b7280;
+  --color-accent: #4a90d9;
+  --color-accent-hover: #357abd;
+  --color-border: #e5e7eb;
+  --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue",
+                Helvetica, Arial, sans-serif;
+  --max-width: 720px;
+  --transition: 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-stack);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* === 导航栏 === */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+}
+
+.nav-logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  transition: color var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--color-accent);
+}
+
+/* === Hero === */
+.hero {
+  padding: 140px 0 80px;
+  text-align: center;
+}
+
+.hero-avatar {
+  margin-bottom: 28px;
+}
+
+.avatar-placeholder {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-accent), #7cb8e4);
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(74, 144, 217, 0.3);
+}
+
+.hero-avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero-name {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.hero-tagline {
+  font-size: 1.1rem;
+  color: var(--color-accent);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.hero-bio {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* === 通用区段 === */
+.section {
+  padding: 80px 0;
+}
+
+.section-alt {
+  background: var(--color-bg-alt);
+}
+
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 3px;
+  background: var(--color-accent);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* === 关于我 === */
+.about-content p {
+  color: var(--color-text-light);
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+
+.about-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* === 技能标签 === */
+.skills-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 8px 20px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  cursor: default;
+  transition: all var(--transition);
+}
+
+.skill-tag:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(74, 144, 217, 0.15);
+}
+
+/* === 爱好卡片 === */
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.hobby-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 28px 24px;
+  text-align: center;
+  transition: all var(--transition);
+}
+
+.hobby-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.hobby-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.hobby-card h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.hobby-card p {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+/* === 联系方式 === */
+.contact-intro {
+  text-align: center;
+  color: var(--color-text-light);
+  margin-bottom: 32px;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 0.95rem;
+  padding: 12px 24px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  min-width: 300px;
+  transition: all var(--transition);
+}
+
+.contact-link:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  box-shadow: 0 2px 8px rgba(74, 144, 217, 0.1);
+}
+
+.contact-icon {
+  font-size: 1.2rem;
+}
+
+/* === 页脚 === */
+.footer {
+  padding: 28px 0;
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+}
+
+.footer p {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+/* === 滚动渐入动画 === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === 响应式 === */
+@media (max-width: 768px) {
+  .hero {
+    padding: 120px 0 60px;
+  }
+
+  .hero-name {
+    font-size: 1.8rem;
+  }
+
+  .hero-tagline {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+    margin-bottom: 32px;
+  }
+
+  .hobbies-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-links a {
+    font-size: 0.82rem;
+  }
+
+  .contact-link {
+    min-width: 100%;
+  }
+}
