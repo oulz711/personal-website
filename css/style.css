@@ -172,8 +172,45 @@ body {
   font-size: 0.95rem;
 }
 
-.about-content p:last-child {
-  margin-bottom: 0;
+.about-more {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, margin 0.5s ease;
+  margin-top: 0;
+}
+
+.about-more.expanded {
+  max-height: 500px;
+  margin-top: 16px;
+}
+
+.expand-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all var(--transition);
+  margin-top: 8px;
+}
+
+.expand-btn:hover {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.expand-arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.expand-arrow.rotated {
+  transform: rotate(180deg);
 }
 
 /* === 技能标签 === */
@@ -192,8 +229,9 @@ body {
   border-radius: 24px;
   font-size: 0.9rem;
   color: var(--color-text);
-  cursor: default;
+  cursor: pointer;
   transition: all var(--transition);
+  user-select: none;
 }
 
 .skill-tag:hover {
@@ -201,6 +239,35 @@ body {
   border-color: var(--color-accent);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(74, 144, 217, 0.15);
+}
+
+.skill-tag.active {
+  background: var(--color-accent);
+  color: #fff;
+  border-color: var(--color-accent);
+}
+
+.skill-detail {
+  text-align: center;
+  margin-top: 28px;
+  padding: 20px 28px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-accent);
+  border-radius: 12px;
+  color: var(--color-text);
+  font-size: 0.95rem;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.4s ease;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.skill-detail.visible {
+  max-height: 200px;
+  opacity: 1;
+  padding: 20px 28px;
 }
 
 /* === 爱好卡片 === */
@@ -217,11 +284,19 @@ body {
   padding: 28px 24px;
   text-align: center;
   transition: all var(--transition);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
 .hobby-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.hobby-card.expanded {
+  border-color: var(--color-accent);
+  box-shadow: 0 8px 28px rgba(74, 144, 217, 0.12);
 }
 
 .hobby-icon {
@@ -235,9 +310,40 @@ body {
   margin-bottom: 8px;
 }
 
-.hobby-card p {
+.hobby-card > p {
   font-size: 0.85rem;
   color: var(--color-text-light);
+}
+
+.hobby-hint {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  margin-top: 10px;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: all var(--transition);
+}
+
+.hobby-card:hover .hobby-hint {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hobby-detail {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, margin 0.4s ease;
+  margin-top: 0;
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  line-height: 1.7;
+  text-align: left;
+}
+
+.hobby-detail.expanded {
+  max-height: 200px;
+  margin-top: 16px;
 }
 
 /* === 联系方式 === */
