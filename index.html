@@ -13,8 +13,8 @@
   <!-- 导航栏 -->
   <nav class="navbar">
     <div class="container">
-      <a href="#home" class="nav-logo">钊</a>
-      <ul class="nav-links">
+      <a href="#home" class="nav-logo" data-nav="home">钊</a>
+      <ul class="nav-links" id="nav-links">
         <li><a href="#about">关于</a></li>
         <li><a href="#skills">技能</a></li>
         <li><a href="#hobbies">爱好</a></li>
@@ -23,107 +23,195 @@
     </div>
   </nav>
 
-  <!-- Hero 头部 -->
-  <header id="home" class="hero">
-    <div class="container">
-      <div class="hero-avatar">
-        <img src="images/01.jpg" alt="区亮钊">
-      </div>
-      <h1 class="hero-name">区亮钊</h1>
-      <p class="hero-tagline">嵌入式工程师 · 热爱技术与创造</p>
-      <p class="hero-bio">你好，我是一名充满热情的开发者。</p>
-    </div>
-  </header>
+  <!-- ===== 视图：首页 ===== -->
+  <div id="view-home" class="view">
 
-  <!-- 关于我 -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="section-title">关于我</h2>
-      <div class="about-content clickable" onclick="location.href='about.html'">
-        <p>我是一名嵌入式工程师，专注于嵌入式系统开发与底层驱动设计。</p>
-        <p>在日常工作中，我热衷于解决硬件与软件之间的复杂问题，追求代码的高效与稳定。我的技术之旅从单片机开始，逐步深入到 Linux 嵌入式系统、RTOS 以及各种通信协议。</p>
+    <!-- Hero 头部 -->
+    <header class="hero">
+      <div class="container">
+        <div class="hero-avatar">
+          <img src="images/01.jpg" alt="区亮钊">
+        </div>
+        <h1 class="hero-name">区亮钊</h1>
+        <p class="hero-tagline">嵌入式工程师 · 热爱技术与创造</p>
+        <p class="hero-bio">你好，我是一名充满热情的开发者。</p>
+      </div>
+    </header>
+
+    <!-- 关于我 -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">关于我</h2>
+        <div class="about-content clickable" data-spa="about">
+          <p>我是一名嵌入式工程师，专注于嵌入式系统开发与底层驱动设计。</p>
+          <p>在日常工作中，我热衷于解决硬件与软件之间的复杂问题，追求代码的高效与稳定。我的技术之旅从单片机开始，逐步深入到 Linux 嵌入式系统、RTOS 以及各种通信协议。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 技能展示 -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">技能</h2>
+        <div class="skills-cloud">
+          <span class="skill-tag" data-spa="skills">C语言</span>
+          <span class="skill-tag" data-spa="skills">C++</span>
+          <span class="skill-tag" data-spa="skills">ARM Cortex-M</span>
+          <span class="skill-tag" data-spa="skills">RTOS</span>
+          <span class="skill-tag" data-spa="skills">通信协议</span>
+          <span class="skill-tag" data-spa="skills">硬件调试</span>
+          <span class="skill-tag" data-spa="skills">Linux驱动</span>
+          <span class="skill-tag" data-spa="skills">Git</span>
+          <span class="skill-tag" data-spa="skills">Python</span>
+          <span class="skill-tag" data-spa="skills">硬件基础</span>
+          <span class="skill-tag" data-spa="skills">低功耗设计</span>
+          <span class="skill-tag" data-spa="skills">性能优化</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 个人爱好 -->
+    <section id="hobbies" class="section">
+      <div class="container">
+        <h2 class="section-title">爱好</h2>
+        <div class="hobbies-grid">
+          <a class="hobby-card" data-spa="hobby-cycling">
+            <div class="hobby-icon">🚴</div>
+            <h3>骑行</h3>
+            <p>享受迎风而行的自由与城市风景</p>
+          </a>
+          <a class="hobby-card" data-spa="hobby-swimming">
+            <div class="hobby-icon">🏊</div>
+            <h3>游泳</h3>
+            <p>在水中感受全身心的放松与力量</p>
+          </a>
+          <a class="hobby-card" data-spa="hobby-basketball">
+            <div class="hobby-icon">🏀</div>
+            <h3>篮球</h3>
+            <p>享受团队配合与竞技的激情</p>
+          </a>
+          <a class="hobby-card" data-spa="hobby-movie">
+            <div class="hobby-icon">🎬</div>
+            <h3>电影</h3>
+            <p>在光影世界中体验百态人生</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">联系我</h2>
+        <p class="contact-intro">欢迎交流合作，你可以通过以下方式找到我：</p>
+        <div class="contact-links">
+          <a href="mailto:zhangsan@example.com" class="contact-link">
+            <span class="contact-icon">✉</span>
+            <span>zhangsan@example.com</span>
+          </a>
+          <a href="https://github.com/oulz711" target="_blank" rel="noopener" class="contact-link">
+            <span class="contact-icon">⌘</span>
+            <span>GitHub</span>
+          </a>
+          <a href="#" class="contact-link">
+            <span class="contact-icon">💬</span>
+            <span>微信：zhangsan_wx</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2026 区亮钊. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+  </div><!-- /view-home -->
+
+  <!-- ===== 视图：关于我 ===== -->
+  <div id="view-about" class="view view-page">
+    <div class="page-content">
+      <div class="page-header">
+        <h1 class="page-title">关于我</h1>
       </div>
     </div>
-  </section>
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2026 区亮钊. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </div>
 
-  <!-- 技能展示 -->
-  <section id="skills" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">技能</h2>
-      <div class="skills-cloud">
-        <span class="skill-tag" onclick="location.href='skills.html'">C语言</span>
-        <span class="skill-tag" onclick="location.href='skills.html'">C++</span>
-        <span class="skill-tag" onclick="location.href='skills.html'">ARM Cortex-M</span>
-        <span class="skill-tag" onclick="location.href='skills.html'">RTOS</span>
-        <span class="skill-tag" onclick="location.href='skills.html'">通信协议</span>
-        <span class="skill-tag" onclick="location.href='skills.html'">硬件调试</span>
-        <span class="skill-tag" onclick="location.href='skills.html'">Linux驱动</span>
-        <span class="skill-tag" onclick="location.href='skills.html'">Git</span>
-        <span class="skill-tag" onclick="location.href='skills.html'">Python</span>
-        <span class="skill-tag" onclick="location.href='skills.html'">硬件基础</span>
-        <span class="skill-tag" onclick="location.href='skills.html'">低功耗设计</span>
-        <span class="skill-tag" onclick="location.href='skills.html'">性能优化</span>
+  <!-- ===== 视图：技能 ===== -->
+  <div id="view-skills" class="view view-page">
+    <div class="page-content">
+      <div class="page-header">
+        <h1 class="page-title">技能</h1>
       </div>
     </div>
-  </section>
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2026 区亮钊. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </div>
 
-  <!-- 个人爱好 -->
-  <section id="hobbies" class="section">
-    <div class="container">
-      <h2 class="section-title">爱好</h2>
-      <div class="hobbies-grid">
-        <a href="hobby-cycling.html" class="hobby-card">
-          <div class="hobby-icon">🚴</div>
-          <h3>骑行</h3>
-          <p>享受迎风而行的自由与城市风景</p>
-        </a>
-        <a href="hobby-swimming.html" class="hobby-card">
-          <div class="hobby-icon">🏊</div>
-          <h3>游泳</h3>
-          <p>在水中感受全身心的放松与力量</p>
-        </a>
-        <a href="hobby-basketball.html" class="hobby-card">
-          <div class="hobby-icon">🏀</div>
-          <h3>篮球</h3>
-          <p>享受团队配合与竞技的激情</p>
-        </a>
-        <a href="hobby-movie.html" class="hobby-card">
-          <div class="hobby-icon">🎬</div>
-          <h3>电影</h3>
-          <p>在光影世界中体验百态人生</p>
-        </a>
+  <!-- ===== 视图：爱好 - 骑行 ===== -->
+  <div id="view-hobby-cycling" class="view view-page">
+    <div class="page-content">
+      <div class="page-header">
+        <h1 class="page-title">🚴 骑行</h1>
       </div>
     </div>
-  </section>
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2026 区亮钊. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </div>
 
-  <!-- 联系方式 -->
-  <section id="contact" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">联系我</h2>
-      <p class="contact-intro">欢迎交流合作，你可以通过以下方式找到我：</p>
-      <div class="contact-links">
-        <a href="mailto:zhangsan@example.com" class="contact-link">
-          <span class="contact-icon">✉</span>
-          <span>zhangsan@example.com</span>
-        </a>
-        <a href="https://github.com/oulz711" target="_blank" rel="noopener" class="contact-link">
-          <span class="contact-icon">⌘</span>
-          <span>GitHub</span>
-        </a>
-        <a href="#" class="contact-link">
-          <span class="contact-icon">💬</span>
-          <span>微信：zhangsan_wx</span>
-        </a>
+  <!-- ===== 视图：爱好 - 游泳 ===== -->
+  <div id="view-hobby-swimming" class="view view-page">
+    <div class="page-content">
+      <div class="page-header">
+        <h1 class="page-title">🏊 游泳</h1>
       </div>
     </div>
-  </section>
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2026 区亮钊. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </div>
 
-  <!-- 页脚 -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 区亮钊. All Rights Reserved.</p>
+  <!-- ===== 视图：爱好 - 篮球 ===== -->
+  <div id="view-hobby-basketball" class="view view-page">
+    <div class="page-content">
+      <div class="page-header">
+        <h1 class="page-title">🏀 篮球</h1>
+      </div>
     </div>
-  </footer>
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2026 区亮钊. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ===== 视图：爱好 - 电影 ===== -->
+  <div id="view-hobby-movie" class="view view-page">
+    <div class="page-content">
+      <div class="page-header">
+        <h1 class="page-title">🎬 电影</h1>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2026 区亮钊. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

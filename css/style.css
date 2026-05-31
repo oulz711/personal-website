@@ -262,10 +262,42 @@ body {
   color: var(--color-text-light);
 }
 
+/* === SPA 视图切换 === */
+.view {
+  display: none;
+}
+
+.view.active {
+  display: block;
+  animation: viewIn 0.35s ease;
+}
+
+@keyframes viewIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* === 子页面内容区 === */
 .page-content {
   padding: 120px 0 80px;
   min-height: 60vh;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.page-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 /* === 联系方式 === */
